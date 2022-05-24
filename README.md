@@ -1,3 +1,3 @@
-# install-pantheon-terminus
+# Install Pantheon Terminus
 
-Install and configure Pantheon's CLI tool [Terminus](https://pantheon.io/docs/terminus).
+Install Pantheon's CLI tool [Terminus](https://pantheon.io/docs/terminus).
