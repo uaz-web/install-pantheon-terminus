@@ -25,6 +25,7 @@ runs:
         curl -L https://github.com/pantheon-systems/terminus/releases/download/"${{ inputs.terminus-version }}"/terminus.phar --output terminus
         chmod +x terminus
         sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
+        echo "terminus-version: ${{ inputs.terminus-version }}"
       shell: bash
     - name: Authenticate with Pantheon machine token
       run: terminus auth:login --machine-token="${{ inputs.pantheon-machine-token }}"
