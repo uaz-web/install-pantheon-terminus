@@ -42,8 +42,8 @@ runs:
       shell: bash
       
     - name: Setup SSH
+      if: inputs.setup-ssh
       run: |
-        if: inputs.setup-ssh
         mkdir ${HOME}/.ssh && chmod 700 ${HOME}/.ssh
         echo "Host *.drush.in\n    StrictHostKeyChecking no" > ${HOME}/.ssh/config
         echo "${{ inputs.pantheon-ssh-key }}" > ${HOME}/.ssh/id_rsa
