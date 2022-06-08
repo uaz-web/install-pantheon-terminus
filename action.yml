@@ -42,7 +42,7 @@ runs:
       shell: bash
       
     - name: Setup SSH
-      if: ${{ inputs.setup-ssh }}
+      if: ${{ inputs.setup-ssh == 'true' }}
       run: |
         echo "Setting up SSH key"
         mkdir ${HOME}/.ssh && chmod 700 ${HOME}/.ssh
