@@ -6,6 +6,12 @@ to be used in Github actions.
 This requires [creating a machine token in pantheon](https://pantheon.io/docs/machine-tokens), and adding it to the repository
 or organization that you are running this action on.
 
+## Input options
+`pantheon-machine-token`
+`setup-ssh`
+`pantheon-ssh-key`
+`terminus-version`
+
 ## Examples
 
 ### Install terminus without ssh set up.
