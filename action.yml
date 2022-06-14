@@ -46,7 +46,7 @@ runs:
       run: |
         echo "Setting up SSH key"
         mkdir ${HOME}/.ssh && chmod 700 ${HOME}/.ssh
-        printf "Host *.drush.in\n    StrictHostKeyChecking no\n   HostkeyAlgorithms +ssh-rsa\n   PubkeyAcceptedAlgorithms +ssh-rsa" > ${HOME}/.ssh/config
-        printf "${{ inputs.pantheon-ssh-key }}" > ${HOME}/.ssh/id_rsa
+        echo -e "Host *.drush.in\n    StrictHostKeyChecking no\n   HostkeyAlgorithms +ssh-rsa\n   PubkeyAcceptedAlgorithms +ssh-rsa" > ${HOME}/.ssh/config
+        echo "${{ inputs.pantheon-ssh-key }}" > ${HOME}/.ssh/id_rsa
         chmod 600 ${HOME}/.ssh/*
       shell: bash
