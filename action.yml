@@ -32,7 +32,7 @@ runs:
       run: |
         echo "Installing Terminus version: ${{ inputs.terminus-version }}"
         mkdir -p ~/terminus && cd ~/terminus
-        curl -L https://github.com/pantheon-systems/terminus/releases/download/"${{ inputs.terminus-version }}"/terminus.phar --output terminus
+        curl -L https://github.com/pantheon-systems/terminus/releases/download/${{ inputs.terminus-version }}/terminus.phar --output terminus
         chmod +x terminus
         sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
       shell: bash
