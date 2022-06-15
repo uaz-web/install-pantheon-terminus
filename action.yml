@@ -3,7 +3,7 @@ description: "Install Terminus, Pantheon's CLI tool."
 inputs:
   terminus-version:
     description: 'A specific version of Terminus to install. (x.y.z)'
-    default: '3.0.7'
+    default: 'latest'
     required: false
     type: string
   pantheon-machine-token:
