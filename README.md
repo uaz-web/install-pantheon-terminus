@@ -1,12 +1,12 @@
 # Install Pantheon Terminus
 
-**install-pantheon-terminus** is a Github Action that downloads, installs, and authenticates Pantheon's CLI tool, [Terminus](https://pantheon.io/docs/terminus). As per [Pantheon's documentation](https://pantheon.io/docs/terminus/install#ssh-authentication), some commands may require SSH authentication, so this can be configured to setup SSH authentication with Pantheon. 
+**install-pantheon-terminus** is a Github Action that downloads, installs, and authenticates Pantheon's CLI tool, [Terminus](https://pantheon.io/docs/terminus). As per [Pantheon's documentation](https://pantheon.io/docs/terminus/install#ssh-authentication), some commands may require SSH authentication, so this Action can be configured to setup SSH authentication with Pantheon. 
 
 ## Inputs
 
 | Input Name | Description | Default |
 |------------|-------------|---------|
-| patheon-machine-token | A [machine token](https://pantheon.io/docs/machine-tokens) that must be created in the Pantheon dashboard and added as secret in Github. | **Must be provided (required)** |
+| patheon-machine-token | A [machine token](https://pantheon.io/docs/machine-tokens) that must be created in the Pantheon dashboard and added as a secret in Github. | **Must be provided (required)** |
 | terminus-version | A specific version of Terminus. | **3.0.7** |
 | setup-ssh | Boolean value that determines if an SSH key is setup or not.| **false** |
 | pantheon-ssh-key | A SSH key that must be [added in the Pantheon dashboard](https://pantheon.io/docs/ssh-keys) and added as a secret in Github. | **Must be provided** |
