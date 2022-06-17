@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install Pantheon Terminus
-        uses: az-digital/install-pantheon-terminus/@1.0.0
+        uses: az-digital/install-pantheon-terminus@v1
         with:
           pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
 ```
@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install Pantheon Terminus
-        uses: az-digital/install-pantheon-terminus/@1.0.0
+        uses: az-digital/install-pantheon-terminus@v1
         with:
           pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
           setup-ssh: true
@@ -55,7 +55,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install Pantheon Terminus
-        uses: az-digital/install-pantheon-terminus/@1.0.0
+        uses: az-digital/install-pantheon-terminus@v1
         with:
           pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
           terminus-version: '3.0.5'
