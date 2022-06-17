@@ -1,20 +1,19 @@
 # Install Pantheon Terminus
 
-Reusable action for installing Pantheon's CLI tool [Terminus](https://pantheon.io/docs/terminus) 
-to be used in Github actions.
+**install-pantheon-terminus** is a Github Action that downloads, installs, and authenticates Pantheon's CLI tool, [Terminus](https://pantheon.io/docs/terminus). As per [Pantheon's documentation](https://pantheon.io/docs/terminus/install#ssh-authentication), some commands may require SSH authentication, so this can be configured to setup SSH authentication with Pantheon. 
 
-This requires [creating a machine token in pantheon](https://pantheon.io/docs/machine-tokens), and adding it to the repository
-or organization that you are running this action on.
+## Inputs
 
-## Input options
-`pantheon-machine-token`
-`setup-ssh`
-`pantheon-ssh-key`
-`terminus-version`
+| Input Name | Description | Default |
+|------------|-------------|---------|
+| patheon-machine-token | A [machine token](https://pantheon.io/docs/machine-tokens) that must be created in the Pantheon dashboard and added as secret in Github. | **Must be provided (required)** |
+| terminus-version | A specific version of Terminus. | **3.0.7** |
+| setup-ssh | Boolean value that determines if an SSH key is setup or not.| **false** |
+| pantheon-ssh-key | A SSH key that must be [added in the Pantheon dashboard](https://pantheon.io/docs/ssh-keys) and added as a secret in Github. | **Must be provided** |
 
 ## Examples
 
-### Install terminus without ssh set up.
+### Install Terminus without SSH key.
 
 ```
 jobs:
@@ -28,7 +27,7 @@ jobs:
           pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
 ```
 
-### Install terminus with SSH set up.
+### Install Terminus and setup SSH key.
 
 This requires [adding an SSH key](https://pantheon.io/docs/ssh-keys) to both pantheon, and the repository or organization
 that you are running this action on.
